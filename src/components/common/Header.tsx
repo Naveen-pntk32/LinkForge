@@ -19,10 +19,10 @@ import {
 } from "@/components/ui/dropdown-menu"
 
 const navLinks = [
-  { href: '#', label: 'Platform' },
-  { href: '#', label: 'Solutions' },
-  { href: '#', label: 'Pricing' },
-  { href: '#', label: 'Resources' },
+    { href: '/', label: 'Home' },
+    { href: '/stats', label: 'Statistics' },
+    { href: '#', label: 'Pricing' },
+    { href: '#', label: 'Resources' },
 ];
 
 export function Header() {
@@ -36,7 +36,7 @@ export function Header() {
         className="justify-start w-full md:w-auto text-foreground/80 hover:text-foreground"
       >
         {label}
-        <ChevronDown className="ml-1 h-4 w-4" />
+        {href.startsWith('#') && <ChevronDown className="ml-1 h-4 w-4" />}
       </Button>
     </Link>
   );
@@ -56,7 +56,7 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-1">
-            {navLinks.map(link => <NavLink key={link.href} {...link} />)}
+            {navLinks.map(link => <NavLink key={link.label} {...link} />)}
           </nav>
 
           <div className="flex flex-1 items-center justify-end space-x-2">
@@ -94,7 +94,7 @@ export function Header() {
                       </Link>
                     </div>
                   <nav className="flex flex-col space-y-2">
-                    {navLinks.map(link => <NavLink key={link.href} {...link} />)}
+                    {navLinks.map(link => <NavLink key={link.label} {...link} />)}
                     <Button variant="ghost" className="w-full justify-start">Log in</Button>
                     <Button variant="outline" className="w-full justify-start">Get a Quote</Button>
                     <Button className="w-full justify-start">Sign up Free</Button>
