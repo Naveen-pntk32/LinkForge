@@ -4,7 +4,7 @@ import { Toaster } from '@/components/ui/toaster';
 import { Header } from '@/components/common/Header';
 
 export const metadata: Metadata = {
-  title: 'LinkForge',
+  title: 'Bitly',
   description: 'Shorten URLs with ease and track their performance.',
 };
 
@@ -14,7 +14,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning className="dark">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
