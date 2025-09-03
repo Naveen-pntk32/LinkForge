@@ -19,10 +19,9 @@ import {
 } from "@/components/ui/dropdown-menu"
 
 const navLinks = [
-    { href: '/', label: 'Home' },
-    { href: '/stats', label: 'Statistics' },
-    { href: '#', label: 'Pricing' },
-    { href: '#', label: 'Resources' },
+    { href: '/platform', label: 'Platform' },
+    { href: '/pricing', label: 'Pricing' },
+    { href: '/resources', label: 'Resources' },
 ];
 
 export function Header() {

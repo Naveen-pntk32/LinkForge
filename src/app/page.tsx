@@ -1,5 +1,5 @@
 import { ShortenForm } from '@/components/home/ShortenForm';
-import { QrCode, Link } from 'lucide-react';
+import { QrCode, Link as LinkIcon } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 
@@ -10,12 +10,12 @@ export default function Home() {
         Build stronger digital connections
       </h1>
       <p className="mt-6 text-lg text-muted-foreground sm:text-xl max-w-3xl mx-auto">
-        Use our URL shortener, QR Codes, and landing pages to engage your audience and connect them to the right information. Build, edit, and track everything inside the Bitly Connections Platform.
+        Use our URL shortener, QR Codes, and landing pages to engage your audience and connect them to the right information. Build, edit, and track everything inside the LinkForge Connections Platform.
       </p>
       
       <Tabs defaultValue="short-link" className="w-full max-w-md mx-auto mt-12">
         <TabsList className="grid w-full grid-cols-2 bg-secondary">
-          <TabsTrigger value="short-link"><Link className="mr-2"/>Short link</TabsTrigger>
+          <TabsTrigger value="short-link"><LinkIcon className="mr-2"/>Short link</TabsTrigger>
           <TabsTrigger value="qr-code"><QrCode className="mr-2"/>QR Code</TabsTrigger>
         </TabsList>
         <TabsContent value="short-link">
